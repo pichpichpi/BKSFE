@@ -3,7 +3,7 @@ import axios from 'axios';
 import {loadUserData as _loadUserData, registerUser as _registerUser, loginUser as _loginUser} from './urls';
 
 export const loadUserData = () => {
-  return axios.get(_loadUserData);
+  return null;
 };
 
 export const registerUser = (username, password) => {

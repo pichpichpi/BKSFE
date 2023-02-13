@@ -44,7 +44,7 @@ const App = () => {
             path='/'
             title='BKSeach'
           >
-            <HomePage/>
+            <QuestionsPage/>
           </LayoutRoute>
           <LayoutRoute
             exact
@@ -53,27 +53,7 @@ const App = () => {
           >
             <QuestionsPage/>
           </LayoutRoute>
-          <LayoutRoute
-            exact
-            path='/tags'
-            title='Tags'
-          >
-            <AllTagsPage/>
-          </LayoutRoute>
-          <LayoutRoute
-            exact
-            path='/users'
-            title='Users'
-          >
-            <AllUsersPage/>
-          </LayoutRoute>
-          <BaseRoute
-            exact
-            path='/register'
-            title='Sign Up'
-          >
-            <Register/>
-          </BaseRoute>
+        
           <BaseRoute
             exact
             path='/login'

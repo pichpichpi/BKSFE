@@ -1,5 +1,5 @@
-import React, {Fragment} from 'react';
-import {ReactComponent as Search} from '../../../assets/Search.svg';
+import React, { Fragment } from 'react';
+import { ReactComponent as Search } from '../../../assets/Search.svg';
 
 const SearchBox = ({
   placeholder,
@@ -15,11 +15,15 @@ const SearchBox = ({
     <Fragment>
       <form
         id='search'
-        onSubmit={handleSubmit}
+        onSubmit={(event) => {
+          console.log("test")
+          event.preventDefault()
+          handleSubmit()
+        }}
         className={`grid--cell fl-grow1 searchbar ${pt} ${px} js-searchbar`}
         autoComplete='off'
       >
-        <div className='ps-relative search-frame' style={{width}}>
+        <div className='ps-relative search-frame' style={{ width }}>
           <input
             className='s-input s-input__search h100 search-box'
             autoComplete='off'
@@ -27,7 +31,10 @@ const SearchBox = ({
             name={name}
             maxLength='35'
             placeholder={placeholder}
-            onChange={handleChange}
+            onChange={(event) => {
+              handleChange(event.target.value)
+            }
+            }
             value={value}
           />
           <Search />

@@ -3,9 +3,9 @@ import axios from 'axios';
 import { allTagsData as _allTagsData, singleTagData as _singleTagData } from './urls';
 
 export const allTagsData = () => {
-  return axios.get(_allTagsData);
+  return null
 }
 
 export const singleTagData = (tagName) => {
-  return axios.get(_singleTagData.replace('{tagName}', tagName));
+  return null
 }
